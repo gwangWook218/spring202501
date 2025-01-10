@@ -10,13 +10,13 @@ import com.example.demo.ch03.used.Greet;
 public class DemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args).getBean(DemoApplication.class).excute();
+		SpringApplication.run(DemoApplication.class, args).getBean(DemoApplication.class).execute();
 	}
 
 	@Autowired
 	Greet greet;
 	
-	private void excute() {
+	private void execute() {
 		greet.greeting();
 	}
 }

@@ -4,16 +4,16 @@ import java.text.SimpleDateFormat;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.After;
+//import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
+//import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
 public class SampleAspect {
-	@Before("execution(* com.example.demo.ch03.used.*Greet.*(..))")
+//	@Before("execution(* com.example.demo.ch03.used.*Greet.*(..))")
 	public void beforeAdvice(JoinPoint joinPoint) {
 //		시작 부분 표시
 		System.out.println("===== Before Advice =====");
@@ -23,7 +23,7 @@ public class SampleAspect {
 		System.out.println(String.format("메서드: %s", joinPoint.getSignature().getName()));
 	}
 	
-	@After("execution(* com.example.demo.ch03.used.*Greet.*(..))")
+//	@After("execution(* com.example.demo.ch03.used.*Greet.*(..))")
 	public void afterAdvice(JoinPoint joinPoint) {
 //		시작 부분 표시
 		System.out.println("===== After Advice =====");
