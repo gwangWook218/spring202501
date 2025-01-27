@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Member">
+	<insert id="save" parameterType="member">
+		insert into member_tbl(custno, custname, phone, address, joindate, grade, city)
+		values(#{custno}, #{custname}, #{phone}, #{address}, #{joindate}, #{grade}, #{city})
+	</insert>
+	<select id="findAll" resultType="member">
+		select * from member_tbl
+	</select>
+	<select id="findById" parameterType="Integer" resultType="member">
+		select * from member_tbl
+		where custno=#{custno}
+	</select>
+	<update id="update">
+		update member_tbl
+		set custno=#{custno}, custname=#{custname}, phone=#{phone}, address=#{address},
+			joindate=#{joindate}, grade=#{grade}, city=#{city}
+		where custno=#{custno}
+	</update>
+	<delete id="delete" parameterType="Integer">
+		delete from member_tbl
+		where custno=#{custno}
+	</delete>
+</mapper>
