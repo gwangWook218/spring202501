@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOME</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+  <div class="main">
+    <div th:insert="./header :: header"></div>
+    <section>
+      <h1>인덱스</h1>
+    </section>
+    <div th:insert="./list :: list"></div>
+    <div th:insert="./footer :: footer"></div>
+  </div>
+</body>
+</html>

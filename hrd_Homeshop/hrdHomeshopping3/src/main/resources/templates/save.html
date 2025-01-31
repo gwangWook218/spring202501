@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+  <div class="main">
+    <div th:insert="./header :: header"></div>
+    <section>
+      <h1>회원가입</h1>
+    </section>
+    <save>
+      <form action="/save" method="post">
+        회원번호: <input type="number" name="custno"><br>
+        회원성명: <input type="text" name="custname"><br>
+        연락처: <input type="text" name="phone"><br>
+        주소: <input type="text" name="address"><br>
+        가입일자: <input type="date" name="joindate"><br>
+        회원등급: <input type="text" name="grade"><br>
+        도시코드: <input type="text" name="city"><br>
+        <input type="submit" value="작성하기">
+      </form>
+    </save>
+    <div th:insert="./footer :: footer"></div>
+  </div>
+</body>
+</html>
